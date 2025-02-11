@@ -5,7 +5,9 @@
 %   if ($mode eq 'screen') {
       <& /Widgets/SavedSearch:show, %ARGS, Action => 'index.html', self => $saved_search, Title => 'Saved Activity reports' &>
 %   }
+<div class="row mt-2">
 <& /Search/Elements/ActivityReport, %ARGS &>
+</div>
 % }
 
 </&>
