@@ -35,11 +35,23 @@ The original extension was functionally complete but visually dated. Version 2.0
 
 ### Activity Detail
 
-The main activity log with colour-coded status badges and live ticket links:
+Chronological event log with colour-coded status badges, clickable ticket
+links, and a bar chart showing the daily distribution:
 
-![Activity Detail with status badges and modern table](docs/activity-detail.png)
+![Activity Detail](docs/activity-detail.png)
 
-### MiniPlot bar chart
+### Activity Summary
+
+Per-queue breakdown of all events grouped by status, with grand totals:
+
+![Activity Summary](docs/activity-summary.png)
+
+### Worked Statistics
+
+Queue resolution statistics (created vs. resolved, time buckets) and the
+still-open ticket list — all in separate cards:
+
+![Worked Statistics](docs/worked-statistics.png)
 
 The bar chart at the top of each report shows the distribution at a glance.
 Hover over any bar to see the exact value.
