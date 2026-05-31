@@ -80,10 +80,10 @@ for (keys %queue) {
           </tr>
           <tr>
             <th class="ar-num">Total</th><th class="ar-num">Resolved</th>
-            <th class="ar-num">&lt;&nbsp;24h</th><th class="ar-num">24–48h</th>
+            <th class="ar-num">&lt;&nbsp;24h</th><th class="ar-num">24-48h</th>
             <th class="ar-num">&gt;&nbsp;48h</th><th class="ar-num">Open</th>
             <th class="ar-num">Total</th><th class="ar-num">Resolved</th>
-            <th class="ar-num">&lt;&nbsp;24h</th><th class="ar-num">24–48h</th>
+            <th class="ar-num">&lt;&nbsp;24h</th><th class="ar-num">24-48h</th>
             <th class="ar-num">&gt;&nbsp;48h</th><th class="ar-num">Open</th>
           </tr>
         </thead>
@@ -129,7 +129,7 @@ for (keys %queue) {
             <th>User</th>
             <th>Queue</th>
             <th class="ar-num">&lt;&nbsp;24h</th>
-            <th class="ar-num">24–48h</th>
+            <th class="ar-num">24-48h</th>
             <th class="ar-num">&gt;&nbsp;48h</th>
             <th class="ar-num">Time&nbsp;worked&nbsp;(h)</th>
             <th class="ar-num">Avg&nbsp;min/ticket</th>
@@ -147,7 +147,7 @@ for (keys %queue) {
             <td class="ar-num"><% $user{$user}{$queue}{more} || 0 %></td>
             <td class="ar-num"><% sprintf("%.2f", ($user{$user}{$queue}{time} || 0) / 60) %></td>
             <td class="ar-num"><% sprintf("%.2f", ($user{$user}{$queue}{time} || 0) / (scalar keys %{$user{$user}{$queue}{tickets}} || 1)) %></td>
-            <td class="ar-num"><% $user{$user}{$queue}{time} ? sprintf("%.2f", ($user{$user}{$queue}{resolves} || 0) / ($user{$user}{$queue}{time} / 60)) : "—" %></td>
+            <td class="ar-num"><% $user{$user}{$queue}{time} ? sprintf("%.2f", ($user{$user}{$queue}{resolves} || 0) / ($user{$user}{$queue}{time} / 60)) : "-" %></td>
           </tr>
 %   }
 % }
@@ -158,7 +158,7 @@ for (keys %queue) {
 </div>
 
 <div class="ar-card mt-3">
-  <div class="ar-card-header">Still open — created in date range</div>
+  <div class="ar-card-header">Still open - created in date range</div>
   <div class="ar-card-body" style="padding:0.75rem">
     <& /Elements/CollectionList,
         Query   => qq{ ( Created >= '$start'  AND Created <= '$end' ) AND ( Status = 'new'  OR Status = 'open' ) },
